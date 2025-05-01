@@ -29,13 +29,16 @@ const ProductSinglePage = () => {
   // getting single product
   useEffect(() => {
     dispatch(fetchAsyncProductSingle(id));
-
+  
     if (cartMessageStatus) {
-      setTimeout(() => {
+      const timer = setTimeout(() => {
         dispatch(setCartMessageOff());
       }, 2000);
+      
+      // Cleanup function to clear the timeout
+      return () => clearTimeout(timer);
     }
-  }, [cartMessageStatus]);
+  }, [dispatch, id, cartMessageStatus]);
 
   let discountedPrice =
     product?.price - product?.price * (product?.discountPercentage / 100);

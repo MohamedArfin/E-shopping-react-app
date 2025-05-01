@@ -13,7 +13,7 @@ const Sidebar = () => {
   const isSidebarOn = useSelector(getSidebarStatus);
   const categories = useSelector(getAllCategories);
   const slugify = (str) =>
-    str.toLowerCase().replace(/\s+/g, "-").replace(/[^a-z0-9\-]/g, "");
+    str.toLowerCase().replace(/\s+/g, "-").replace(/[^a-z0-9-]/g, "");
 
 
   useEffect(() => {

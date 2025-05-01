@@ -22,7 +22,7 @@ const SearchPage = () => {
       dispatch(clearSearch());
       dispatch(fetchAsyncSearchProduct(searchTerm));
     }
-  }, [searchTerm]);
+  }, [dispatch, searchTerm]);
 
   if (!searchTerm || searchTerm.trim() === "") {
     return (

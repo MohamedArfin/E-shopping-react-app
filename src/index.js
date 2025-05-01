@@ -9,9 +9,9 @@ import { BrowserRouter } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 import { persistStore } from "redux-persist";
-import { PersistGate, PersistGateProps } from "redux-persist/integration/react";
+import { PersistGate} from "redux-persist/integration/react";
 
-let persistor = persistStore(store)
+const  persistor = persistStore(store)
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(

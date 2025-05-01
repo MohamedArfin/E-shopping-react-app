@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import "./Navbar.scss";
 import { Link } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
@@ -19,7 +19,7 @@ const Navbar = () => {
 
   useEffect(() => {
     dispatch(getCartTotal());
-  }, [carts]);
+  }, [dispatch, carts]);
 
   return (
     <div className="nav">
