@@ -1,0 +1,50 @@
+@import "../../App.scss";
+.product-lists {
+  row-gap: 2rem;
+
+  @media screen and (min-width: 576px) {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 1.4rem;
+  }
+
+  @media screen and (min-width: 768px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @media screen and (min-width: 1200px) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  @media screen and (min-width: 1400px) {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+.navbar-collapse {
+  margin-top: 10px;
+  .navbar-search {
+    padding: 10px;
+    // margin-left: 20px;
+    border-radius: 2px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
+      rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+
+    .form-control {
+      width: 100%;
+      font-size: medium;
+      padding: 3px 10px;
+      color: rgba(0, 0, 0, 0.8);
+      //   caret-color: $clr-orange;
+      &::placeholder {
+        font-size: 13.5px;
+        font-family: $font-family-manrope;
+        letter-spacing: 0.5px;
+      }
+    }
+    .search-btn {
+      background-color: red;
+      width: 60px;
+      height: 32px;
+    }
+  }
+}
